@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<br>
+
+<br>
+<title>🤠 Charraiá da Emanuela 🌽</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#fde3f5;
+    padding:20px;
+    margin:0;
+}
+
+.card{
+    max-width:700px;
+    margin:auto;
+    background:#ffc6ec8a;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    position:relative;
+    overflow:hidden;
+}
+
+h1{
+    text-align:center;
+    color:#c0392b;
+    margin-bottom:5px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#7a4020;
+    margin-bottom:25px;
+}
+
+.info{
+    background:#ffabea;
+    padding:15px;
+    border-radius:12px;
+    margin:10px 0;
+    line-height:1.8;
+}
+
+.localizacao{
+    display:block;
+    text-align:center;
+    background:#27ae60;
+    color:#fff;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.mensagem{
+    text-align:center;
+    line-height:1.7;
+    color:#7a4020;
+    margin:20px 0;
+}
+
+.presente{
+    background:#ffabea;
+    border:2px solid #ff4bd2;
+    border-radius:15px;
+    padding:18px;
+    margin:20px 0;
+}
+
+.presente h3{
+    margin-top:0;
+    color:#c0392b;
+}
+
+.presente p{
+    line-height:1.7;
+    color:#7a4020;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#7a4020;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    background:#c0392b;
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#a93226;
+}
+
+.success{
+    display:none;
+    margin-top:25px;
+    background:#fff8e8;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+}
+
+.success h2{
+    color:#c0392b;
+}
+
+.resumo{
+    text-align:left;
+    margin-top:15px;
+    line-height:1.8;
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    font-size:24px;
+}
+
+.add-person-btn{
+    width:100%;
+    background:#fff8e8;
+    color:#7a4020;
+    border:2px dashed #e8c070;
+    margin-top:10px;
+}
+
+.add-person-btn:hover{
+    background:#fff2d2;
+}
+
+.pessoa-item{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+    align-items:center;
+}
+
+.pessoa-item input{
+    flex:1;
+}
+
+.remover-btn{
+    width:auto;
+    margin:0;
+    padding:12px 15px;
+    background:#e74c3c;
+    flex-shrink:0;
+}
+
+.remover-btn:hover{
+    background:#c0392b;
+}
+
+.decor{
+    position:absolute;
+    pointer-events:none;
+    z-index:0;
+    opacity:.50;
+}
+
+.bandeira-esq{
+    position:absolute;
+    top:0;
+    left:100;
+    width:45%;
+    z-index:1;
+}
+
+.bandeira-dir{
+    position:absolute;
+    top:0;
+    right:50px;
+    width:45%;
+    z-index:1;
+
+}
+
+.gorro{
+    top:90px;
+    left:-40px;
+    width:180px;
+}
+
+.bebe{
+    top:120px;
+    right:-40px;
+    width:240px;
+}
+
+.boneca{
+    top:380px;
+    left:-60px;
+    width:200px;
+}
+
+.mamadeira{
+    top:420px;
+    right:-40px;
+    width:180px;
+}
+
+.saia{
+    bottom:260px;
+    left:-20px;
+    width:220px;
+}
+
+.abc{
+    bottom:220px;
+    right:10px;
+    width:120px;
+}
+
+.cerca{
+    bottom:0;
+    left:0;
+    width:220px;
+    opacity:.22;
+}
+
+.milho{
+    bottom:0;
+    right:0;
+    width:180px;
+    opacity:.22;
+}
+
+.maca{
+    bottom:400px;
+    left:90%;
+    transform:translateX(-50%);
+    width:150px;
+    opacity:.22;
+}
+
+</style>
+</head>
+
+<body>
+  
+
+<div class="card">
+
+  <img src="https://i.postimg.cc/nr2Ksrxw/bandeiras-esq.png" class="decor bandeira-esq">
+
+  <img src="https://i.postimg.cc/3rvPyHPk/bandeiras-dir.png" class="decor bandeira-dir">
+
+  <img src="https://i.postimg.cc/SNjVXLXs/fogueira.png" class="decor bebe">
+
+  <img src="https://i.postimg.cc/sDXQswBf/meira.png" class="decor gorro">
+
+  <img src="https://i.postimg.cc/FHPQmVL4/Pngtree-baby-girl-doll-toy-set-21718386.png" class="decor boneca">
+
+  <img src="https://i.postimg.cc/qMRh4jtf/chupeta.png" class="decor mamadeira">
+
+  <img src="https://i.postimg.cc/tCTZp21Q/mamadeira.png" class="decor saia">
+
+  <img src="https://i.postimg.cc/zBFbXQSg/arcoiro.png" class="decor abc">
+
+  <img src="https://i.postimg.cc/SKpcScFC/fralda.png" class="decor cerca">
+
+  <img src="https://i.postimg.cc/BQd5Xrf0/milho.png" class="decor milho">
+
+  <img src="https://i.postimg.cc/HnLh6f64/Pngtree-delicious-red-candy-apple-on-23624549.png" class="decor maca">
+    <br>  </br>
+    <br>  </br>
+
+    <h1>🤠 Charraiá da Emanuela 🌽</h1>
+
+    <p class="subtitulo">
+        Você está convidado(a) para celebrar conosco esse momento tão especial!
+    </p>
+
+    <div class="info">
+        <strong>📅 Data:</strong> 20/06/2026 às 17:00<br>
+        <strong>📍 Local:</strong> Rua São Domingos, 132 - Vila Coelho Dias
+    </div>
+
+    <a
+        class="localizacao"
+        href="https://maps.app.goo.gl/mZthjCjH37UG3fNfA"
+        target="_blank">
+        📍 Abrir Localização no Google Maps
+    </a>
+
+    <div class="mensagem">
+        Nossa pequena Emanuela está chegando e queremos dividir esse momento tão especial com pessoas queridas que fazem parte da nossa história.
+        <br><br>
+        Prepare seu chapéu de palha, vista sua camisa xadrez e venha celebrar conosco uma tarde cheia de alegria, carinho, comidas típicas e muita emoção!
+    </div>
+
+    <div class="presente">
+
+        <h3>🎁 Um carinho para a Emanuela</h3>
+
+        <p>
+            Como uma pequena ajuda para a chegada da nossa princesa,
+            pedimos que o convidado leve um pacote de fralda de sua preferência
+            nos tamanhos <strong>RN, P ou M</strong> e um mimo especial da lista.
+        </p>
+
+        <p>
+            Sua contribuição será recebida com muito carinho e ajudará bastante
+            nos primeiros meses da Emanuela. 💖
+        </p>
+
+    </div>
+
+    <label>👤 Seu nome</label>
+    <input id="nome" placeholder="Digite seu nome">
+
+    <br><br>
+
+    <label>👨‍👩‍👧 Quem da sua casa irá junto com você?</label>
+
+    <div id="acompanhantes"></div>
+
+    <button
+    type="button"
+    class="add-person-btn"
+    onclick="adicionarPessoa()">
+    ➕ Adicionar pessoa
+  </button>
+
+    <br><br>
+
+    <label>🍼 Tamanho da Fralda</label>
+
+    <select id="fralda">
+        <option value="">Selecione</option>
+        <option>RN</option>
+        <option>P</option>
+        <option>M</option>
+    </select>
+
+    <br><br>
+
+    <label>🧴 Mimo Especial</label>
+
+    <select id="mimo">
+        <option value="">Selecione</option>
+        <option>Jogo de fraldinhas de pano</option>
+        <option>Kit toalhinha + sabonete</option>
+        <option>Colônia infantil</option>
+        <option>Body/Roupinha RN, P ou M</option>
+        <option>Touquinha ou luvinhas ou Meias de bebê</option>
+        <option>Babador</option>
+        <option>Paninho de boca</option>
+        <option>Toalhinha de banho</option>
+        <option>Shampoo ou hidratante infantil</option>
+        <option>Cueiro/Manta leve</option>
+        <option>Calçados tamanhos 14 ao 20</option>
+        <option>Kit de laços/faixinhas</option>
+        <option>Um mimo da minha escolha</option>
+    </select>
+
+    
+    <button type="button" onclick="confirmar()">
+      🎉 Confirmar Presença
+    </button>
+
+    <div class="success" id="success">
+
+        <h2>🎉 Presença Confirmada!</h2>
+
+        <p>
+            Muito obrigado pela confirmação.
+            Estamos ansiosos para compartilhar esse momento tão especial com você!
+        </p>
+
+        <div class="resumo" id="resumo"></div>
+
+    </div>
+
+    <div class="footer">
+        🌽 🤠 🎶 🔥 🌽
+    </div>
+
+</div>
+
+<script>
+
+window.onerror = function(msg, url, line){
+    alert('ERRO: ' + msg + ' | Linha: ' + line);
+};
+
+function adicionarPessoa(){
+
+    const container =
+        document.getElementById('acompanhantes');
+
+    const div =
+        document.createElement('div');
+
+    div.className = 'pessoa-item';
+
+    div.innerHTML =
+'<input type="text" class="acompanhante" placeholder="Nome da pessoa">' +
+'<button type="button" class="remover-btn" onclick="removerPessoa(this)">✖</button>';
+
+    container.appendChild(div);
+}
+
+function removerPessoa(btn){
+    btn.parentNode.remove();
+}
+
+function confirmar(){
+
+    const nome = document.getElementById('nome').value.trim();
+    const fralda = document.getElementById('fralda').value;
+    const mimo = document.getElementById('mimo').value;
+
+    const acompanhantes = Array.from(
+    document.querySelectorAll('.acompanhante')
+)
+.map(function(x){
+    return x.value.trim();
+})
+.filter(function(x){
+    return x !== '';
+});
+
+    if(!nome){
+        alert('Informe seu nome.');
+        return;
+    }
+
+    if(!fralda){
+        alert('Selecione o tamanho da fralda.');
+        return;
+    }
+
+    if(!mimo){
+        alert('Selecione um mimo especial.');
+        return;
+    }
+
+    document.getElementById('resumo').innerHTML = `
+    <strong>Nome:</strong> ${nome}<br><br>
+
+    <strong>Pessoas que irão junto:</strong><br>
+    ${
+        acompanhantes.length
+        ? acompanhantes.join('<br>')
+        : 'Nenhuma informada'
+    }
+    <br><br>
+
+    <strong>Fralda:</strong> ${fralda}<br>
+    <strong>Mimo:</strong> ${mimo}<br><br>
+
+    📅 20/06/2026 às 17:00<br>
+    📍 Rua São Domingos, 132 - Vila Coelho Dias
+`;
+
+    document.getElementById('success').style.display='block';
+
+    document.getElementById('success').scrollIntoView({
+        behavior:'smooth'
+    });
+
+    const mensagem = `
+CONFIRMAÇÃO - CHARRAIÁ DA EMANUELA
+
+Nome:
+${nome}
+
+Acompanhantes:
+${
+    acompanhantes.length
+    ? acompanhantes.join('\n')
+    : 'Nenhum'
+}
+
+Fralda:
+${fralda}
+
+Mimo:
+${mimo}
+
+Data:
+20/06/2026 às 17:00
+
+Local:
+Rua São Domingos, 132 - Vila Coelho Dias
+`;
+
+window.location.href =
+'https://wa.me/5599981981505?text=' +
+encodeURIComponent(mensagem);
+
+}
+
+</script>
+
+</body>
+<script>
+alert('JavaScript funcionando');
+</script>
+</html>
